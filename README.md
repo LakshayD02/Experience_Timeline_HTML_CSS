@@ -54,4 +54,3 @@ This project provides a clean and modern experience timeline, perfect for showca
 
 * **Styling:**  Modify the CSS to customize the colors, fonts, layout, and overall appearance of the timeline. 🎨
 
-* **Features:** Add more interactive elements, such as tooltips, animations, or expandable sections.
