@@ -10,25 +10,30 @@
     font-family: "Poppins";
     font-weight: 500;
     font-style: normal;
-  }
+}
 
 .main{
     width: 100%;
     height: auto;
-    background-color: rgb(245, 245, 245);
+    background: linear-gradient(to right, #E3F2FD, #FFFFFF); /* Light blue and white */
     font-family: "Poppins";
-    /* font-weight: 500; */
     padding: 50px 0;
     display: grid;
     place-items: center;
 }
 
-.main .heading{
+@keyframes colorChange {
+    0% { color: #0647c6; } /* Dark Blue */
+    50% { color: #3b82f6; } /* Light Blue */
+    100% { color: #1552bc; } /* White */
+}
+
+.main .heading {
     font-size: 30px;
     font-weight: 500;
-    color: rgb(106, 6, 236);
     position: relative;
     margin-bottom: 100px;
+    animation: colorChange 3s infinite alternate ease-in-out;
 }
 
 .heading::after{
@@ -38,7 +43,7 @@
     height: 4px;
     left: 50%;
     bottom: -5px;
-    background-image: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+    background-image: linear-gradient(to right, #0647c6, #003366); /* Blue to Dark Blue */
     transform: translate(-50%);
 }
 
@@ -51,10 +56,9 @@
 .container::after{
     position: absolute;
     content: ' ';
-    /* left: -30px; */
     width: 2px;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgb(106, 6, 236), rgb(220, 0, 240));
+    background-image: linear-gradient(to bottom, #0647c6, #003366); /* Blue to Dark Blue */
 }
 
 .container ul{
@@ -72,13 +76,13 @@
     border-radius: 10px;
     margin-bottom: 30px;
     z-index: 99;
+    border: 1.5px solid #0647c6; /* Blue */
     position: relative;
 }
 
 .container ul li:hover{
-    box-shadow: 1.5px 1px 25px rgba(255, 0, 242, 0.1);
-    border: 1.5px solid rgb(166, 0, 184);
-
+    box-shadow: 1.5px 1px 25px rgba(0, 71, 198, 0.2);
+    border: 1.5px solid #003366; /* Dark Blue */
 }
 
 .container ul li:nth-child(odd){
@@ -105,7 +109,7 @@
 .container ul li .title{
     font-size: 20px;
     font-weight: 500;
-    color: rgb(106, 6, 236);
+    color: #0647c6; /* Blue */
 }
 
 ul li p{
@@ -120,7 +124,7 @@ ul li a{
     text-decoration: none;
     font-size: 15px;
     padding: 6px;
-    color: rgb(106, 6, 236);
+    color: #0647c6; /* Blue */
 }
 
 ul li#diff{
@@ -138,7 +142,7 @@ ul li .date{
     height: 38px;
     border-radius: 20px;
     color: #fff;
-    background-image: linear-gradient(to bottom, rgb(106, 6, 236), rgb(220, 0, 240));
+    background-image: linear-gradient(to bottom, #0647c6, #003366); /* Blue to Dark Blue */
     display: grid;
     place-items: center;
     font-size: 15px;
@@ -148,7 +152,7 @@ ul li .date{
 .container ul li .circle{
     width: 30px;
     height: 30px;
-    background-color: rgb(220, 0, 240, 0.403);
+    background-color: rgba(6, 71, 198, 0.4); /* Blue */
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -158,7 +162,7 @@ ul li .date{
     content: ' ';
     width: 17px;
     height: 17px;
-    background-color: rgb(106, 6, 236);
+    background-color: #0647c6; /* Blue */
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -223,5 +227,4 @@ ul li .date{
     .container ul li:nth-child(even){
         transform: translateX(0);
     }
-
 }
